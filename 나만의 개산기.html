@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko-kr">
+<html lang="ko-kr" id="html">
   <head>
     <meta charset="utf-8">
     <title>개산기</title>
     <style>
+
       #bodyColor {
         background: linear-gradient(to right, lightgreen, lightblue);
       }
@@ -14,17 +15,28 @@
       input {
         background: linear-gradient(to right, lightgreen, lightblue);
       }
+      #update_log {
+        background: linear-gradient(to right, lightblue, lightgreen);
+        text-align: center;
+        box-shadow: 5px 5px;
+      }
+      #html {
+        text-align: center;
+      }
     </style>
 
   </head>
   <body id="bodyColor">
-    <h1>개산기</h1><h2>버전:1.1</h2>
+    <h1>개산기</h1><h2>버전:1.2</h2>
+
     <div>
       <input type="text" name="" value="" id="ipt_1"><input type="text" name="" value="" id="ipt_2">
 
       <input type="button" name="" value="더하기" onclick="plus()" id="buttoncolor">
 
       <input type="button" name="" value="빼기" onclick="mainus()" id="buttoncolor_2">
+
+      <input type="button" name="" value="곱하기" onclick="Multiplication()" id="buttoncolor_5">
 
       <input type="button" name="" value="배경-핑크" onclick="chgColor('pink')" id="buttoncolor_3">
 
@@ -36,12 +48,42 @@
     <span>=</span>
       <div id="ddd" style="color: red;">버튼을 누르세요</div>
       <span>입니다</span>
-      <MARQUEE direction="up" scrollamount="2" behavior="alternate" height="60">Made By Hyeonjun</marquee>
+      <div id="update_log">
+        <details>
+          <summary>업데이트 내용(1.2)</summary>
+            *곱하기 추가 <br>
+            *가운대로 정렬 <br>
+            *움직이는 출처 표시 Q 태그로 변경 <br>
+            *CC-BY-NC-SA 2.0 KR 배포 <br>
+            *(예정) 자신이 원하는 색상으로 배경 선택 가능
+        </details>
+        </div><br/>
+        <img src="https://namu.wiki/img/cc-by-nc-sa-2.0-88x31.png" alt=""><br/>
+        이 저작물은 <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/kr/">CC BY-NC-SA 2.0 KR</a>에 따라 이용할 수 있습니다.<br/>
+      <q>Made By Hyeonjun</q>
 
 
     <script type="text/javascript">
 
     console.log("this is made Hyeonjuny 이 개산기는 현준이 만들었습니다");
+
+      function Multiplication() {
+
+        var nurbars1 = document.getElementById("ipt_1").value;
+        var nurbars2 = document.getElementById("ipt_2").value;
+        var dds = document.getElementById("ddd");
+
+        // 문자를 숫자로 변환...
+        nurbars1 = Number(nurbars1);
+        nurbars2 = Number(nurbars2);
+
+        document.getElementById("ddd").innerHTML = nurbars1*nurbars2
+        if (document.getElementById("ddd").innerHTML == "NaN") {
+          document.getElementById("ddd").innerHTML = "문자를 입력하지 마세요."
+        }
+
+        console.log(nurbars1*nurbars2)
+      }
 
       function plus() {
 
@@ -74,6 +116,9 @@
           document.getElementById("buttoncolor_2").style = "background: linear-gradient(to right, "+color+", lightblue);";
           document.getElementById("buttoncolor_3").style = "background: linear-gradient(to right, "+color+", lightblue);";
           document.getElementById("buttoncolor_4").style = "background: linear-gradient(to right, "+color+", lightblue);";
+          document.getElementById("buttoncolor_5").style = "background: linear-gradient(to right, "+color+", lightblue);";
+          //업대이트 로그
+          document.getElementById("update_log").style = "background: linear-gradient(to right, lightblue, "+color+");";
           //입력창 배경바꿈
           document.getElementById("ipt_1").style = "background: linear-gradient(to right, "+color+", lightblue);";
           document.getElementById("ipt_2").style = "background: linear-gradient(to right, "+color+", lightblue);";
