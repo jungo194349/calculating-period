@@ -2,7 +2,7 @@
 <html lang="ko-kr" id="html">
   <head>
     <meta charset="utf-8">
-    <title>개산기</title>
+    <title>계산기</title>
     <style>
 
       #bodyColor {
@@ -27,8 +27,7 @@
 
   </head>
   <body id="bodyColor">
-    <h1>개산기</h1><h2>버전:1.2</h2>
-
+    <h1>계산기</h1>
     <div>
       <input type="text" name="" value="" id="ipt_1"><input type="text" name="" value="" id="ipt_2">
 
@@ -54,18 +53,12 @@
             *곱하기 추가 <br>
             *가운대로 정렬 <br>
             *움직이는 출처 표시 Q 태그로 변경 <br>
-            *CC-BY-NC-SA 2.0 KR 배포 <br>
-            *(예정) 자신이 원하는 색상으로 배경 선택 가능
         </details>
         </div><br/>
-        <img src="https://namu.wiki/img/cc-by-nc-sa-2.0-88x31.png" alt=""><br/>
-        이 저작물은 <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/kr/">CC BY-NC-SA 2.0 KR</a>에 따라 이용할 수 있습니다.<br/>
-      <q>Made By Hyeonjun</q>
+      <q>Made By Jungo19439</q>
 
 
     <script type="text/javascript">
-
-    console.log("this is made Hyeonjuny 이 개산기는 현준이 만들었습니다");
 
       function Multiplication() {
 
@@ -79,7 +72,7 @@
 
         document.getElementById("ddd").innerHTML = nurbars1*nurbars2
         if (document.getElementById("ddd").innerHTML == "NaN") {
-          document.getElementById("ddd").innerHTML = "문자를 입력하지 마세요."
+          document.getElementById("ddd").innerHTML = "숫자를 입력하십시오."
         }
 
         console.log(nurbars1*nurbars2)
@@ -98,7 +91,7 @@
 
         document.getElementById("ddd").innerHTML = nurbars1+nurbars2
         if (document.getElementById("ddd").innerHTML == "NaN") {
-          document.getElementById("ddd").innerHTML = "문자를 입력하지 마세요."
+          document.getElementById("ddd").innerHTML = "숫자를 입력하십시오."
         }
 
 
@@ -122,7 +115,7 @@
           //입력창 배경바꿈
           document.getElementById("ipt_1").style = "background: linear-gradient(to right, "+color+", lightblue);";
           document.getElementById("ipt_2").style = "background: linear-gradient(to right, "+color+", lightblue);";
-          console.log("배경바뀜");
+          console.log("배경색갈 변경 완료.");
 
       }
 
@@ -140,7 +133,7 @@
 
         document.getElementById("ddd").innerHTML = nurbars1-nurbars2
         if (document.getElementById("ddd").innerHTML == "NaN") {
-          document.getElementById("ddd").innerHTML = "문자를 입력하지 마세요."
+          document.getElementById("ddd").innerHTML = "숫자를 입력하십시오."
         }
 
         console.log(nurbars1-nurbars2);
